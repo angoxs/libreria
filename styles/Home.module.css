@@ -3,10 +3,6 @@
 }
 
 .group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
   max-width: 1220px;
 }
 
@@ -28,6 +24,12 @@
   border-radius: 6px;
   font-size: 16px;
   margin-top: 30px;
+}
+
+.group button:hover {
+  color: #5452f6;
+  border: 1px solid #5452f6;
+  background: white;
 }
 
 .books_grid {
@@ -58,7 +60,7 @@
   padding: 10px;
   grid-template-columns: 0.25fr 1fr;
 
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
 }
 
 .title_container button {
@@ -72,7 +74,7 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   font-size: 14px;
-  margin-top: 30px;
+  margin-top: 20px;
   font-weight: 500;
 }
 
