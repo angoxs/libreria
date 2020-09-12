@@ -24,10 +24,10 @@ export default function index({ allBooksData }) {
         <h1>Libros que la gente lee mas de 2 veces</h1>
         <button>Recomendar libro</button>
         <div className={styles.books_grid}>
-          {allBooksData.map(({ id, date, title, intro }) => (
+          {allBooksData.map(({ id, date, title, intro, cover }) => (
             <div className={styles.first_book} key={id}>
               <div className={styles.book_image}>
-                <img src="/mastery.jpg" />
+                <img src={cover} />
               </div>
               <div className={styles.title_container}>
                 <h2>{title}</h2>

@@ -2,6 +2,7 @@
 title: "Maestria"
 date: "2020-01-02"
 intro: "El éxito no se debe al accidente. No es el resultado de circunstancias ni de suerte. El éxito viene de la motivación."
+cover: "/maestria.jpg"
 ---
 
 **Intro**

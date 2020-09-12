@@ -12,7 +12,7 @@ export default function Post({ bookData }) {
       </Head>
       <article>
         <img
-          src="/mastery.jpg"
+          src={bookData.cover}
           width="100%"
           height="220px"
           style={{ objectFit: "cover", borderRadius: "10px" }}
