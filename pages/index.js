@@ -24,7 +24,7 @@ export default function index({ allBooksData }) {
         <h1>Libros que la gente lee más de una vez</h1>
         <Link href="/recommend">
           <a>
-            <button>Recomendar libro</button>
+            <button>Recomendar Libro</button>
           </a>
         </Link>
         <div className={styles.books_grid}>
