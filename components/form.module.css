@@ -83,6 +83,10 @@
 }
 
 @media (max-width: 600px) {
+  .reco_container {
+    padding: 50px 5%;
+  }
+
   .button {
     width: 100%;
   }
