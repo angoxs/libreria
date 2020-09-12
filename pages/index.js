@@ -21,14 +21,14 @@ export default function index({ allBooksData }) {
       </Head>
 
       <div className={styles.group}>
-        <h1>Libros que la gente lee mas de 2 veces</h1>
+        <h1>Libros que la gente lee más de una vez</h1>
         <Link href="mailto:angelCL0@outlook.com">
           <a>
             <button>Recomendar libro</button>
           </a>
         </Link>
         <div className={styles.books_grid}>
-          {allBooksData.map(({ id, date, title, intro, cover, name}) => (
+          {allBooksData.map(({ id, date, title, intro, cover, name }) => (
             <div className={styles.first_book} key={id}>
               <div className={styles.book_image}>
                 <img src={cover} />

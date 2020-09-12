@@ -35,7 +35,6 @@ export default function Post({ bookData }) {
           </a>
         </p>
 
-        <br />
         <Date dateString={bookData.date} />
         <br />
         <div dangerouslySetInnerHTML={{ __html: bookData.contentHtml }} />
