@@ -45,13 +45,6 @@
   background: white;
 }
 
-.author {
-  padding: 5px;
-  font-size: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-}
-
 .headingLg {
   font-size: 1.5rem;
   line-height: 1.4;
@@ -87,4 +80,11 @@
 
 .lightText {
   color: #999;
+}
+
+.author {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
 }

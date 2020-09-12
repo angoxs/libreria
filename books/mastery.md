@@ -1,10 +1,11 @@
 ---
 title: "Maestria"
-date: "2020-01-02"
+date: "2020-09-12"
 author: "Robert Greene"
 name: "Ángel Vāzquez"
 intro: "El éxito no se debe al accidente. No es el resultado de circunstancias ni de suerte. El éxito viene de la motivación."
 cover: "/maestria.jpg"
+authorimage: "/robertgreene.png"
 ---
 
 **Intro**
