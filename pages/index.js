@@ -34,7 +34,7 @@ export default function index({ allBooksData }) {
                 {/* {id} */}
                 <p>{intro}</p>
 
-                <Link href="/books/first-book">
+                <Link href="/books/[id]" as={`/books/${id}`}>
                   <a>
                     <button>Read More</button>
                   </a>

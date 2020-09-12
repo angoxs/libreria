@@ -6,6 +6,11 @@
   margin: 1rem 0;
 }
 
+.title {
+  margin: 0;
+  font-size: 32px;
+}
+
 .headingXl {
   font-size: 2rem;
   line-height: 1.3;
