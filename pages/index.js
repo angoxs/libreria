@@ -22,7 +22,7 @@ export default function index({ allBooksData }) {
 
       <div className={styles.group}>
         <h1>Libros que la gente lee más de una vez</h1>
-        <Link href="mailto:angelCL0@outlook.com">
+        <Link href="/recommend">
           <a>
             <button>Recomendar libro</button>
           </a>
