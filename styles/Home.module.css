@@ -13,6 +13,13 @@
   max-width: 600px;
 }
 
+.group p {
+  color: #999;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
 .group button {
   background: #5452f6;
   color: white;
@@ -24,7 +31,7 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   font-size: 16px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .group button:hover {
@@ -50,8 +57,8 @@
 
 .first_book p {
   margin: 0;
-  color: #384360;
-  margin-top: 20px;
+  color: #999;
+  margin-top: 10px;
   font-size: 14px;
 }
 

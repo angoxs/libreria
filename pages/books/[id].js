@@ -23,7 +23,7 @@ export default function Post({ bookData }) {
 
         <br />
         <br />
-        <a href="https://twitter.com/robertgreene" target="_blank">
+        <a href={bookData.authorlink} target="_blank">
           <span className={utilStyles.author}>{bookData.author}</span>
         </a>
         <br />
@@ -31,7 +31,7 @@ export default function Post({ bookData }) {
         <p>{bookData.intro}</p>
         <p className={utilStyles.recommended}>
           Recomendado por
-          <a href="https://twitter.com/angelVZUR" target="_blank">
+          <a href={bookData.sociallink} target="_blank">
             <button>{bookData.name}</button>
           </a>
         </p>

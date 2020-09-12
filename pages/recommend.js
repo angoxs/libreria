@@ -12,6 +12,11 @@ export default function recommend() {
       </Link>
       <div className={styles.reco_group}>
         <h1>¿Le gustaría recomendar un libro?</h1>
+        <p>
+          También puede afectar la empatía, la percepción social y la
+          inteligencia emocional, cuya suma ayuda a las personas a permanecer
+          más tiempo en el planeta.
+        </p>
         <ContactForm />
       </div>
     </div>

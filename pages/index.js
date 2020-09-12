@@ -22,6 +22,11 @@ export default function index({ allBooksData }) {
 
       <div className={styles.group}>
         <h1>Libros que la gente lee más de una vez</h1>
+        <p>
+          Aparentemente, la práctica de leer libros crea un compromiso cognitivo
+          que mejora muchas cosas, incluido el vocabulario, las habilidades de
+          pensamiento y la concentración.
+        </p>
         <Link href="/recommend">
           <a>
             <button>Recomendar Libro</button>
