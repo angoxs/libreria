@@ -2,6 +2,7 @@ import Layout from "../../components/Layout.js";
 import { getAllBooksIds, getBookData } from "../../lib/books";
 import Head from "next/head";
 import Date from "../../components/date";
+import Link from "next/link";
 import utilStyles from "../../styles/utils.module.css";
 
 export default function Post({ bookData }) {
@@ -19,9 +20,21 @@ export default function Post({ bookData }) {
         />
         <br />
         <br />
+        <a href="https://twitter.com/robertgreene" target="_blank">
+          <span className={utilStyles.author}>{bookData.author}</span>
+        </a>
+        <br />
         <h1 className={utilStyles.title}>{bookData.title}</h1>
         <br />
         <p>{bookData.intro}</p>
+
+        <p className={utilStyles.recommended}>
+          Recomendado por
+          <a href="https://twitter.com/angelVZUR" target="_blank">
+            <button>{bookData.name}</button>
+          </a>
+        </p>
+
         <br />
         <Date dateString={bookData.date} />
         <br />

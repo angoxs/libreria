@@ -1,0 +1,94 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  grid-gap: 10px;
+}
+
+.input {
+  padding: 10px;
+  font-size: 16px;
+  height: 50px;
+  color: #000;
+  border-radius: 6px;
+  background: white;
+  border: 1px solid #dee2f4;
+  background: #f4f6ff;
+}
+
+.form label {
+  color: #838a98;
+}
+
+.input:focus {
+  background: #f4f6ff;
+}
+
+.success {
+  background: #5452f6;
+  padding: 20px 0;
+  color: white;
+
+  border-radius: 6px;
+  text-align: center;
+}
+
+.button {
+  background: #5452f6;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.button:hover {
+  color: #5452f6;
+  border: 1px solid #5452f6;
+  background: white;
+}
+
+@media (max-width: 900px) {
+  .form {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 10px;
+    width: 100%;
+  }
+
+  .input {
+    margin: 0;
+    height: 50px;
+  }
+
+  .button {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.reco_container {
+  padding: 100px 5%;
+}
+
+.reco_group {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .form {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 5px;
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+}

@@ -8,6 +8,7 @@
 
 .title {
   margin: 0;
+  margin-top: 20px;
   font-size: 32px;
 }
 
@@ -17,6 +18,38 @@
   font-weight: 800;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
+}
+
+.recommended {
+  font-size: 16px;
+  color: #5452f6;
+}
+
+.recommended button {
+  background: #5452f6;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  margin-left: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.recommended button:hover {
+  color: #5452f6;
+  border: 1px solid #5452f6;
+  background: white;
+}
+
+.author {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
 }
 
 .headingLg {

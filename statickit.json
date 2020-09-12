@@ -1,0 +1,16 @@
+{
+  "forms": {
+    "contactForm": {
+      "name": "Contact Form",
+      "actions": [
+        {
+          "type": "author",
+          "type": "name",
+          "type": "title",
+          "type": "sociallink",
+          "to": "angelCL0@outlook.com"
+        }
+      ]
+    }
+  }
+}

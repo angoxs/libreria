@@ -28,7 +28,7 @@ export default function index({ allBooksData }) {
           </a>
         </Link>
         <div className={styles.books_grid}>
-          {allBooksData.map(({ id, date, title, intro, cover }) => (
+          {allBooksData.map(({ id, date, title, intro, cover, name}) => (
             <div className={styles.first_book} key={id}>
               <div className={styles.book_image}>
                 <img src={cover} />
