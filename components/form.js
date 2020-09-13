@@ -20,7 +20,7 @@ function ContactForm({ value }) {
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
-      <label>Nombre</label>
+      <label>Tu nombre</label>
       <input
         id="name"
         type="name"
@@ -38,7 +38,7 @@ function ContactForm({ value }) {
         required
       />
       <ValidationError prefix="Autor" field="author" errors={state.errors} />
-      <label>Titulo</label>
+      <label>Nombre del libro</label>
       <input
         id="title"
         type="title"
@@ -47,7 +47,7 @@ function ContactForm({ value }) {
         required
       />
       <ValidationError prefix="Title" field="title" errors={state.errors} />
-      <label>Social Link</label>
+      <label>Tu vínculo social</label>
       <input
         id="sociallink"
         type="sociallink"
