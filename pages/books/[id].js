@@ -24,7 +24,7 @@ export default function Post({ bookData }) {
         <br />
         <br />
         <a href={bookData.authorlink} target="_blank">
-          <span className={utilStyles.author}>{bookData.author}</span>
+          <span className={utilStyles.author}>{bookData.author} &rarr;</span>
         </a>
         <br />
         <h1 className={utilStyles.title}>{bookData.title}</h1>
@@ -32,7 +32,7 @@ export default function Post({ bookData }) {
         <p className={utilStyles.recommended}>
           Recomendado por
           <a href={bookData.sociallink} target="_blank">
-            <button> {bookData.name} &rarr;</button>
+            <button> {bookData.name} </button>
           </a>
         </p>
         <Date dateString={bookData.date} />
