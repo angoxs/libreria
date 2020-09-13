@@ -65,7 +65,7 @@ function ContactForm({ value }) {
         disabled={state.submitting}
         className={styles.button}
       >
-        Submit
+        Enviar
       </button>
     </form>
   );
