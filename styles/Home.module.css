@@ -68,7 +68,6 @@
   align-items: center;
   padding: 10px;
   grid-template-columns: 0.25fr 1fr;
-
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
 }
 

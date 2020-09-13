@@ -47,7 +47,7 @@ function ContactForm({ value }) {
         required
       />
       <ValidationError prefix="Title" field="title" errors={state.errors} />
-      <label>Tu vínculo social</label>
+      <label>Twitter</label>
       <input
         id="sociallink"
         type="sociallink"
