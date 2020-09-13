@@ -32,7 +32,7 @@ export default function Post({ bookData }) {
         <p className={utilStyles.recommended}>
           Recomendado por
           <a href={bookData.sociallink} target="_blank">
-            <button>{bookData.name}</button>
+            <button> {bookData.name} &rarr;</button>
           </a>
         </p>
         <Date dateString={bookData.date} />
