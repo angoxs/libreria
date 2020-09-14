@@ -6,43 +6,84 @@ import Link from "next/link";
 import utilStyles from "../../styles/utils.module.css";
 import { motion } from "framer-motion";
 
+const easing = [0.6, -0.5, 0.01, 0.99];
+
+const fadeInUp = {
+  initial: {
+    y: 60,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: easing,
+    },
+  },
+};
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.05,
+    },
+  },
+};
+
 export default function Post({ bookData }) {
   return (
-    <div exit={{ opacity: 0 }}>
-      <Layout>
-        <Head>
-          <title>{bookData.title}</title>
-        </Head>
-        <article>
-          <div className={utilStyles.authorimage}>
-            <img
-              src={bookData.authorimage}
-              width="100%"
-              height="220px"
-              style={{ objectFit: "cover", borderRadius: "10px" }}
-            />
-          </div>
+    <Layout>
+      <Head>
+        <title>{bookData.title}</title>
+      </Head>
+      <motion.article variants={stagger}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className={utilStyles.authorimage}
+        >
+          <motion.img
+            initial={{ x: 200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            src={bookData.authorimage}
+            width="100%"
+            height="220px"
+            style={{ objectFit: "cover", borderRadius: "10px" }}
+          />
+        </motion.div>
 
-          <br />
-          <br />
-          <a href={bookData.authorlink} target="_blank">
-            <span className={utilStyles.author}>{bookData.author} &rarr;</span>
+        <br />
+        <br />
+        <motion.a
+          variants={fadeInUp}
+          href={bookData.authorlink}
+          target="_blank"
+        >
+          <span className={utilStyles.author}>{bookData.author} &rarr;</span>
+        </motion.a>
+        <br />
+        <motion.h1 variants={fadeInUp} className={utilStyles.title}>
+          {bookData.title}
+        </motion.h1>
+        <motion.p variants={fadeInUp}>{bookData.intro}</motion.p>
+        <motion.p variants={fadeInUp} className={utilStyles.recommended}>
+          Recomendado por
+          <a href={bookData.sociallink} target="_blank">
+            <button> {bookData.name} </button>
           </a>
-          <br />
-          <h1 className={utilStyles.title}>{bookData.title}</h1>
-          <p>{bookData.intro}</p>
-          <p className={utilStyles.recommended}>
-            Recomendado por
-            <a href={bookData.sociallink} target="_blank">
-              <button> {bookData.name} </button>
-            </a>
-          </p>
+        </motion.p>
+        <motion.div variants={fadeInUp}>
           <Date dateString={bookData.date} />
-          <br />
-          <div dangerouslySetInnerHTML={{ __html: bookData.contentHtml }} />
-        </article>
-      </Layout>
-    </div>
+        </motion.div>
+        <br />
+        <motion.div
+          variants={fadeInUp}
+          dangerouslySetInnerHTML={{ __html: bookData.contentHtml }}
+        />
+      </motion.article>
+    </Layout>
   );
 }
 

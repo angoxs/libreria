@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useForm, ValidationError } from "@statickit/react";
 import styles from "./form.module.css";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 function ContactForm({ value }) {
   const [state, handleSubmit] = useForm("contactForm");
@@ -11,7 +12,13 @@ function ContactForm({ value }) {
       <>
         <Link href="/">
           <a>
-            <p className={styles.success}>← Volver al inicio</p>
+            <motion.p
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.95 }}
+              className={styles.success}
+            >
+              ← Volver al inicio
+            </motion.p>
           </a>
         </Link>
       </>
@@ -60,13 +67,15 @@ function ContactForm({ value }) {
         field="sociallink"
         errors={state.errors}
       />
-      <button
+      <motion.button
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.95 }}
         type="submit"
         disabled={state.submitting}
         className={styles.button}
       >
         Enviar
-      </button>
+      </motion.button>
     </form>
   );
 }

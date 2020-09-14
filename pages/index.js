@@ -25,7 +25,7 @@ const fadeInUp = {
   },
 };
 
-const stager = {
+const stagger = {
   animate: {
     transition: {
       staggerChildren: 0.1,
@@ -56,18 +56,29 @@ export default function index({ allBooksData }) {
       </Head>
 
       <div className={styles.group}>
-        <h1>Libros que la gente lee más de una vez</h1>
-        <p>
-          Aparentemente, la práctica de leer libros crea un compromiso cognitivo
-          que mejora muchas cosas, incluido el vocabulario, las habilidades de
-          pensamiento y la concentración.
-        </p>
-        <Link href="/recommend">
-          <a>
-            <button>Recomendar Libro</button>
-          </a>
-        </Link>
-        <motion.div variants={stager} className={styles.books_grid}>
+        <motion.div variants={stagger}>
+          <motion.h1 variants={fadeInUp}>
+            Libros que la gente lee más de una vez
+          </motion.h1>
+          <motion.p variants={fadeInUp}>
+            Aparentemente, la práctica de leer libros crea un compromiso
+            cognitivo que mejora muchas cosas, incluido el vocabulario, las
+            habilidades de pensamiento y la concentración.
+          </motion.p>
+          <Link href="/recommend">
+            <a>
+              <motion.button
+                variants={fadeInUp}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Recomendar Libro
+              </motion.button>
+            </a>
+          </Link>
+        </motion.div>
+
+        <motion.div variants={stagger} className={styles.books_grid}>
           {allBooksData.map(({ id, date, title, intro, cover, name }) => (
             <motion.div
               variants={fadeInUp}
@@ -76,7 +87,6 @@ export default function index({ allBooksData }) {
             >
               <div className={styles.book_image}>
                 <motion.img
-                  initial={{ x: -60, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.2 }}
                   src={cover}
@@ -89,7 +99,12 @@ export default function index({ allBooksData }) {
 
                 <Link href="/books/[id]" as={`/books/${id}`}>
                   <a>
-                    <button>Ver más</button>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Ver más
+                    </motion.button>
                   </a>
                 </Link>
               </div>
