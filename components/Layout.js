@@ -55,13 +55,13 @@ export default function Layout({ children, home }) {
 
       <main>{children}</main>
       {!home && (
-        <motion.div className={styles.backToHome}>
+        <div className={styles.backToHome}>
           <Link href="/">
             <motion.div variants={fadeInUp} whileTap={{ scale: 0.95 }}>
               <motion.a className={styles.back}>← Volver al inicio</motion.a>
             </motion.div>
           </Link>
-        </motion.div>
+        </div>
       )}
     </motion.div>
   );
