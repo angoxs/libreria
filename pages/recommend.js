@@ -1,13 +1,16 @@
 import ContactForm from "../components/form";
 import styles from "../components/form.module.css";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function recommend() {
   return (
     <div className={styles.reco_container}>
       <Link href="/">
         <a>
-          <p className={styles.volver}>← Volver</p>
+          <motion.p whileTap={{ scale: 0.95 }} className={styles.volver}>
+            ← Volver
+          </motion.p>
         </a>
       </Link>
       <div className={styles.reco_group}>

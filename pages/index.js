@@ -3,6 +3,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { getSortedBooksData } from "../lib/books";
 import { motion } from "framer-motion";
+import kursor from "kursor";
 
 // animate: defines animation : x: 0
 // initial: defines initial state of animation. x: 60
